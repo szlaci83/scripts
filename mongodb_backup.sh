@@ -5,7 +5,7 @@ if [ $# -eq 0 ]
 then
   d=$(date +'%Y-%m-%d')
 else
-  d = $1
+  d=$1
 fi
 
 dump() {
