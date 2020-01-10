@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ad-hoc run should be done with a param, otherwise date is he suffix
+# ad-hoc run should be done with a param, otherwise date is the filename
 if [ $# -eq 0 ]
 then
   d=$(date +'%Y-%m-%d')
@@ -13,7 +13,7 @@ dump() {
 }
 
 zipit(){
- tar -zcvf /home/laci/backup/mongodb/$d.tar.gz /home/laci/backup/mongo/
+ tar -zcvf /home/laci/backup/mongodb/mongo-$d.tar.gz /home/laci/backup/mongo/
 }
 
 cleanup(){
