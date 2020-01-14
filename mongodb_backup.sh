@@ -16,4 +16,3 @@ cleanup(){
 dump
 zipit
 cleanup
-#echo $1

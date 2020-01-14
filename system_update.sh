@@ -1,3 +1,5 @@
+#!/bin/bash
+
 update() {
     sudo apt-get update;
     sudo apt-get upgrade -y;
@@ -9,8 +11,12 @@ housekeeping() {
     sudo updatedb;
 }
 
+send_mail(){
+     echo "Subject: System update done" | sendmail -v $EMAIL < /var/log/laci/system_update.log
+}
 update
 housekeeping
+send_mail
 #if [ "$(who)" == "" ];
 #  then
 #    echo "Rebooting system."
